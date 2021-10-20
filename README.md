@@ -8,4 +8,9 @@ Simple steps to configure your VPS web server
 * [How to install latest Node JS](https://github.com/markxxv/webserver/blob/main/nodejs.md)
 * [Install & setup FireWall](https://github.com/markxxv/webserver/blob/main/firewall.md)
 
+## Fast deploy by SSH
+```
+rsync --archive --compress --delete . user@example.com:/var/www/example.com/html/
+```
+
 Made with ♥️ in Sweden 🇸🇪
