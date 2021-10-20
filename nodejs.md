@@ -20,4 +20,19 @@ Check it
 node -v
 ```
 
+## Upgrade Node JS Version
+
+Use n module from npm in order to upgrade node
+
+```
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+To upgrade to latest version (and not current stable) version, you can use
+
+```
+sudo n latest
+```
+
 [Back](https://github.com/markxxv/webserver)
