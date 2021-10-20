@@ -26,7 +26,7 @@ Now update repositories list:
 sudo apt update
 ```
 
-> If you'll get notification about `i386` , just ignore it. `Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/mainline/ubuntu focal InRelease' doesn't support architecture 'i386'`
+> If you'll get notification about `i386` , just ignore it. `Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/mainline/ubuntu focal InRelease' doesn't support architecture 'i386'` or alternatively you can replace first deb package with this `deb [arch=amd64,arm64] http://nginx.org/packages/mainline/ubuntu/ focal nginx`
 
 Finally you are ready to install latest ngnix version:
 
