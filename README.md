@@ -1,5 +1,5 @@
-# Personal VPS Web Server 👨‍💻
-Simple steps to configure your VPS web server 
+# Personal VPS Web Server setup & administration 👨‍💻
+Simple steps to setup your VPS web server on Ubuntu 20.04 LTS
 
 ## Must have stuff
 
