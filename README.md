@@ -10,7 +10,7 @@ Simple steps to configure your VPS web server
 
 ## Fast deploy by SSH
 ```
-rsync --archive --compress --delete . user@8.8.8.8:/var/www/example.com/html/
+rsync --archive --compress --delete . user@8.8.8.8:/var/www/example.com/public/
 ```
 
 Made with ♥️ in Sweden 🇸🇪
