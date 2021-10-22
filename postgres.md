@@ -1,4 +1,4 @@
-How to install Latest Postgres on Ubuntu 20.04 Focal
+# How to install Latest Postgres on Ubuntu 20.04 Focal
 
 ```
 # Create the file repository configuration:
