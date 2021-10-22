@@ -5,6 +5,7 @@ Simple steps to setup your VPS web server on Ubuntu 20.04 LTS
 
 * [How to install latest Nginx](https://github.com/markxxv/webserver/blob/main/nginx.md)
 * [How to install latest MariaDB](https://github.com/markxxv/webserver/blob/main/mariadb.md)
+* [How to install latest Postgres SQL](https://github.com/markxxv/webserver/blob/main/postgres.md)
 * [How to install latest Node JS](https://github.com/markxxv/webserver/blob/main/nodejs.md)
 * [Install & setup FireWall](https://github.com/markxxv/webserver/blob/main/firewall.md)
 
