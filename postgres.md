@@ -32,20 +32,22 @@ That's it! 🎉
 sudo -u postgres psql
 ```
 
-## Set UTF8
+### Set UTF8
 
 ```
-SET client_encoding = 'UTF8';
+sudo pg_dropcluster --stop 14 main
+sudo pg_createcluster --locale en_US.UTF-8 --start 14 main
 ```
+> or pg_dropcluster --stop 14.1 main
 
-Create database
+### Create database
 ```
 CREATE DATABASE yourdbname;
 CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
 ```
 
-To show all databases
+### To show all databases
 ```
 \l
 ```
