@@ -32,6 +32,12 @@ That's it! 🎉
 sudo -u postgres psql
 ```
 
+## Set UTF8
+
+```
+SET client_encoding = 'UTF8';
+```
+
 Create database
 ```
 CREATE DATABASE yourdbname;
