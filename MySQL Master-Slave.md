@@ -105,7 +105,7 @@ binlog_do_db = newdatabase
 
 Нам осталось включить репликацию, для этого необходимо указать параметры подключения к мастеру. В консоли mysql на Слейве необходимо выполнить запрос:
 
-````
+```
 CHANGE MASTER TO MASTER_HOST='10.10.0.1', MASTER_USER='slave_user', MASTER_PASSWORD='password',
 MASTER_LOG_FILE = 'mysql-bin.000001', MASTER_LOG_POS = 107;
 ##Указанные значения мы берем из настроек Мастера
@@ -116,6 +116,7 @@ START SLAVE;
 Статус репликации
 
 Проверить работу репликации на Слейве можно запросом:
+
 ```
 mysql> SHOW SLAVE STATUS
              Slave_IO_State: Waiting for master to send event
