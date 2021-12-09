@@ -32,6 +32,10 @@ To install 8.1
 apt-get install php-pear php8.1-curl php8.1-dev php8.1-gd php8.1-mbstring php8.1-zip php8.1-mysql php8.1-sqlite3 php8.1-xml php8.1-fpm php8.1-pgsql
 ```
 
+ ### If you want to change CLI version of php use this command: 
+ 
+`sudo update-alternatives --set php /usr/bin/php7.4` or `sudo update-alternatives --set php /usr/bin/php8.1`
+
 ### Restart PHP service
 
 `service php7.4-fpm restart` or `service php8.1-fpm restart`
