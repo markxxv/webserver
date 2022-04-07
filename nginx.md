@@ -40,4 +40,67 @@ Boom! Just run ngnix daemon and enjoy of best web server of ever!
 sudo systemctl start nginx
 ```
 
+⚠️ To prevent access errors change /etc/nginx/nginx.conf user from `user nginx` to user `www-data`
+
+✅ Tip > for add virtual hosts in the end of `/etc/nginx/nginx.conf` add  `include /etc/nginx/sites-enabled/*;`
+
+## Example Host for PHP App
+
+```
+server {
+    listen   80; ## listen for ipv4; this line is default and implied
+    listen   [::]:80 default ipv6only=on; ## listen for ipv6
+
+    root /var/www/default;
+    index index.php index.html index.htm;
+    server_name 45.12.19.173;
+         
+
+    # Disable sendfile as per https://docs.vagrantup.com/v2/synced-folders/virtualbox.html
+    sendfile off;
+
+    # Security - Hide nginx version number in error pages and Server header
+    server_tokens off;
+
+    # reduce the data that needs to be sent over network
+    gzip on;
+    gzip_min_length 10240;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml application/json text/javascript application/x-javascript application/xml;
+    gzip_disable "MSIE [1-6]\.";
+
+
+    location / {
+        # First attempt to serve request as file, then
+        # as directory, then fall back to index.php
+        try_files $uri $uri/ /index.php?$query_string $uri/index.html;
+    }
+
+    # redirect server error pages to the static page /50x.html
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    } 
+
+    # pass the PHP scripts to FastCGI server listening on socket
+    location ~ \.php$ {
+        try_files $uri $uri/ /index.php?$query_string;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+
+    # deny access to . files, for security
+    location ~ /\. {
+        log_not_found off;
+        deny all;
+    }
+
+}
+```
+
+
 [Back](https://github.com/markxxv/webserver)
