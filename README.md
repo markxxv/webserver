@@ -15,4 +15,11 @@ Simple steps to setup your VPS web server on Ubuntu 20.04 LTS
 rsync --archive --compress --delete . user@8.8.8.8:/var/www/example.com/public/
 ```
 
+### Install Your Own VPN
+
+```
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+```
+Then use generataed file to connect from your client 
+
 Made with ♥️ in Sweden 🇸🇪
