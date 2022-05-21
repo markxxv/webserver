@@ -47,6 +47,12 @@ CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
 ```
 
+### Alternativley you can create only your database in UTF-8
+
+```
+CREATE DATABASE myawesomr_db WITH ENCODING='UTF8' LC_CTYPE='en_US.UTF-8' LC_COLLATE='en_US.UTF-8' OWNER=aura31aty2k_user TEMPLATE=template0 CONNECTION LIMIT=-1;
+```
+
 ### To show all databases
 ```
 \l
