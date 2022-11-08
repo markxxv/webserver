@@ -57,6 +57,18 @@ Check firewall status
 ufw status
 ```
 
+Open port for cpecific ip
+
+```
+sudo ufw allow from 10.0.0.46 proto tcp to any port 5432
+```
+
+And remove this
+
+```
+sudo ufw delete allow from 10.0.0.46 proto tcp to any port 5432
+```
+
 Now your server is secure as hell 🔥
 
 [Back](https://github.com/markxxv/webserver)
