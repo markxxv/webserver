@@ -3,7 +3,7 @@
 To install latest Node JS just replace the version number in my command with the desired one
 
 ```
-wget https://nodejs.org/dist/v16.15.0/node-v18.4.0-linux-x64.tar.gz
+wget https://nodejs.org/dist/v18.4.0/node-v18.4.0-linux-x64.tar.gz
 ```
 
 And install
