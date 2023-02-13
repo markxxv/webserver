@@ -8,10 +8,6 @@ Update system package list:
 sudo apt-get update
 apt-get install software-properties-common
 add-apt-repository ppa:ondrej/php
-```
-
-update your package list:
-```
 apt-get update
 ```
 Run installation
@@ -23,11 +19,10 @@ apt-get install php-pear php7.4-curl php7.4-dev php7.4-gd php7.4-mbstring php7.4
 
 ```
 sudo dpkg -l | grep php | tee packages.txt
-sudo add-apt-repository ppa:ondrej/php # Press enter when prompted.
+sudo add-apt-repository ppa:ondrej/php 
 sudo apt update
-sudo apt install php8.2 php8.2-cli php-8.2{bz2,curl,mbstring,intl}
 ```
-
+Run installation
 ```
 apt-get install php-pear php8.2-curl php8.2-dev php8.2-gd php8.2-mbstring php8.2-zip php8.2-mysql php8.2-sqlite3 php8.2-xml php8.2-fpm php8.2-pgsql
 ```
