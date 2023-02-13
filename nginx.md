@@ -102,5 +102,11 @@ server {
 }
 ```
 
+You can link www and sites enabled folders to your home directory
+
+```
+ln -s /etc/nginx/sites-enabled /root
+ln -s /var/www /root
+```
 
 [Back](https://github.com/markxxv/webserver)
