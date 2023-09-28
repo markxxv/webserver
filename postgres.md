@@ -27,9 +27,14 @@ That's it! 🎉
 
 ## Create User & Database
 
-
+Switch to pg console:
 ```
 sudo -u postgres psql
+```
+
+Create user interactive
+```
+sudo -u postgres createuser --interactive -P
 ```
 
 ### Set UTF8
