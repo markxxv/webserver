@@ -1,14 +1,10 @@
-# How to install Latest Postgres on Ubuntu 20.04 Focal
+# How to install Latest Postgres on Ubuntu 
 
 
-Create the file repository configuration:
+Automated repository configuration: 
 ```
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-```
-
-Import the repository signing key:
-```
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 ```
 
 Update the package lists:
@@ -17,9 +13,8 @@ sudo apt-get update
 ```
 
 Install the latest version of PostgreSQL.
-> If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
 ```
-sudo apt-get -y install postgresql
+apt install postgresql
 ```
 
 That's it! 🎉
@@ -40,10 +35,10 @@ sudo -u postgres createuser --interactive -P
 ### Set UTF8
 
 ```
-sudo pg_dropcluster --stop 14 main
-sudo pg_createcluster --locale en_US.UTF-8 --start 14 main
+sudo pg_dropcluster --stop 16 main
+sudo pg_createcluster --locale en_US.UTF-8 --start 16 main
 ```
-> or pg_dropcluster --stop 14.1 main
+> or pg_dropcluster --stop 16 main
 
 ### Create database
 ```
