@@ -38,4 +38,4 @@ apt-get install php-pear php8.3-curl php8.3-dev php8.3-gd php8.3-mbstring php8.3
 
 ### Restart PHP service
 
-`service php7.4-fpm restart` or `service php8.2-fpm restart`
+`service php7.4-fpm restart` or `service php8.3-fpm restart`
