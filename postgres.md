@@ -60,7 +60,9 @@ CREATE DATABASE myawesomr_db WITH ENCODING='UTF8' LC_CTYPE='en_US.UTF-8' LC_COLL
 
 ## Backup 
 
+```
 sudo -u postgres pg_dump mydb > /root/mydb.dmp
+```
 
 
 [Back](https://github.com/markxxv/webserver)
