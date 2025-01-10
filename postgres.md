@@ -45,6 +45,7 @@ sudo pg_createcluster --locale en_US.UTF-8 --start 16 main
 CREATE DATABASE yourdbname;
 CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+GRANT CREATE ON SCHEMA public TO youruser;
 ```
 
 ### Alternativley you can create only your database in UTF-8
