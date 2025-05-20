@@ -15,7 +15,7 @@ Run installation
 apt-get install php-pear php7.4-curl php7.4-dev php7.4-gd php7.4-mbstring php7.4-zip php7.4-mysql php7.4-sqlite3 php7.4-xml php7.4-fpm php7.4-pgsql
 ```
 
-## To install 8.2
+## To install 8.4
 
 ```
 sudo dpkg -l | grep php | tee packages.txt
