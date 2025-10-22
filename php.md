@@ -38,7 +38,9 @@ apt-get install php-pear php8.4-curl php8.4-dev php8.4-gd php8.4-mbstring php8.4
 
  ### If you want to change CLI version of php use this command: 
  
-`sudo update-alternatives --set php /usr/bin/php7.4` or `sudo update-alternatives --set php /usr/bin/php8.2`
+`sudo update-alternatives --set php /usr/bin/php7.4` 
+`sudo update-alternatives --set php /usr/bin/php8.2`
+`sudo update-alternatives --set php /usr/bin/php8.4`
 
 ### Restart PHP service
 
