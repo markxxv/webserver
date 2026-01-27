@@ -32,6 +32,17 @@ MariaDB service will start automatically, to verify it run:
 sudo systemctl status mariadb
 ```
 
+
+### Create BackUP
+```
+mysqldump gg > gg.sql
+```
+
+### Restore DB BackUP
+````
+mysql gg < gg.sql
+````
+
 That's it! 🎉
 
 [Back](https://github.com/markxxv/webserver)
