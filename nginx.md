@@ -102,6 +102,7 @@ server {
 }
 ```
 
+
 You can link www and sites enabled folders to your home directory
 
 ```
@@ -114,6 +115,42 @@ ln -s /var/www /root
 ```
 	keepalive_timeout 65;
 	client_max_body_size 1024M;
+```
+
+Basic example for laravel app with php execution protection
+```
+server {
+    server_name www.smbureau.fr;
+    return 301 $scheme://smbureau.fr$request_uri;
+}
+
+server {
+    listen 80;
+    server_name smbureau.fr;
+
+    root /var/www/smbureau.fr/public;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # ❌ deny any PHP file eexecution
+    location ~ \.php$ {
+        return 404;
+    }
+
+    # ✅ allow only frontcontroller
+    location = /index.php {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
+    }
+
+    # ❌ deny hiiden files
+    location ~ /\. {
+        deny all;
+    }
+}
 ```
 
 [Back](https://github.com/markxxv/webserver)
