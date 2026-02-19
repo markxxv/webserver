@@ -3,13 +3,13 @@
 To install latest Node JS just replace the version number in my command with the desired one
 
 ```
-wget https://nodejs.org/dist/v24.13.0/node-v24.13.0-linux-x64.tar.gz
+wget https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-x64.tar.gz
 ```
 
 And install
  
 ```
-sudo tar -C /usr/local --strip-components 1 -xzf node-v24.13.0-linux-x64.tar.gz
+sudo tar -C /usr/local --strip-components 1 -xzf node-v24.13.1-linux-x64.tar.gz
 ```
 
 Boom! 🎉 That's it! 
